@@ -67,6 +67,24 @@ public class Player : MonoBehaviour
                 timeBtwShoots -= Time.deltaTime;
             }
         }
+
+        Quaternion target;
+        Vector3 input = Input.mousePosition; // 750 / 420
+        Debug.Log(input);
+        Debug.Log(transform.position.x);
+        Debug.Log(input.x);
+        if (transform.position.x > (input.x - 750/2)/80)
+        {
+            // Rotate the cube by converting the angles into a quaternion.
+            target = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            target = Quaternion.Euler(0, 180, 0);
+        }
+        // Dampen towards the target rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 180);
+
     }
 
     public void updateGun()

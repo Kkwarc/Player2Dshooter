@@ -2838,6 +2838,26 @@ PrefabInstance:
       propertyPath: gunShot
       value: 
       objectReference: {fileID: 1940072004}
+    - target: {fileID: 4857523722704496430, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857523722704496430, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857523722704496430, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857523722704496430, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857523722704496430, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6488263441527854576, guid: f833755b51f66ee4e9c4caad24b58e7c, type: 3}
       propertyPath: m_RootOrder
       value: 2

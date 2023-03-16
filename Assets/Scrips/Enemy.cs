@@ -22,6 +22,19 @@ public class Enemy : MonoBehaviour
     {
         speed = Mathf.Max(speed, (player.score + 10) / 10);
         transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+
+        Quaternion target;
+        if (playerPos.position.x > transform.position.x)
+        {
+            // Rotate the cube by converting the angles into a quaternion.
+            target = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            target = Quaternion.Euler(0, 180, 0);
+        }
+        // Dampen towards the target rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 180);
     }
 
     void OnTriggerEnter2D(Collider2D other)
