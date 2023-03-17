@@ -69,11 +69,9 @@ public class Player : MonoBehaviour
         }
 
         Quaternion target;
-        Vector3 input = Input.mousePosition; // 750 / 420
-        Debug.Log(input);
-        Debug.Log(transform.position.x);
-        Debug.Log(input.x);
-        if (transform.position.x > (input.x - 750/2)/80)
+        Vector3 input = Input.mousePosition;
+        float mouspos = input.x * 8 / 375 - 8;
+        if (transform.position.x > mouspos)
         {
             // Rotate the cube by converting the angles into a quaternion.
             target = Quaternion.Euler(0, 0, 0);
@@ -116,8 +114,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 pos_change = rb.position + moveVelocity * Time.fixedDeltaTime;
-        float xMax = 7.5f;
-        float yMax = 3.5f;
+        float xMax = 9.32f-0.5f;
+        float yMax = 5f-0.75f;
         if(pos_change.x > xMax)
         {
             pos_change.x = xMax;
